@@ -9,6 +9,8 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Product {
+    @Getter
+    @Setter
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
