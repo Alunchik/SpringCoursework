@@ -24,7 +24,4 @@ public class Cart {
 //    @JoinColumn(name = "user_id")
     @Column(name="user_id")
     private Long userId;
-//    private User user;
-//    @Column(name="category")
-//    private Category category;
 }

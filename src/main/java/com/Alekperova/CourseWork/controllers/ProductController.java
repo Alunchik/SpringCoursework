@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-public class ShopProductController {
+public class ProductController {
     private final ProductService productService;
 
     @PostMapping("/products")
@@ -25,6 +25,11 @@ public class ShopProductController {
         return productService.getAllProducts();
     }
 
+    @GetMapping("/products/category/{category}")
+    public List<Product> getAllProductsByCategory(@PathVariable("category") Category category) {
+
+        return productService.getByCategory(category);
+    }
     @GetMapping("/products/name_search")
     public List<Product> getProductsByName(@RequestParam("name") String name){
         return productService.getByName(name);

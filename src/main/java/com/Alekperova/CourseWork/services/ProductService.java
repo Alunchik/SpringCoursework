@@ -22,9 +22,9 @@ public class ProductService {
     public List<Product> getByName(String name){
         return productRepository.findAllByNameContaining(name);
     }
-//    public List<Product> getByCategory(Category category){
-//        return productRepository.findAllByCategory(category);
-//    }
+    public List<Product> getByCategory(Category category){
+        return productRepository.findAllByCategory(category);
+    }
     public List<Product> getByPrice(Long price1, Long price2){
         return productRepository.findAllByPriceBetween(price1, price2);
     }

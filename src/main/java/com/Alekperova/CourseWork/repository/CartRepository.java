@@ -8,7 +8,6 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 
 public interface CartRepository extends JpaRepository<Cart, Long> {
-//    @Query(value = "select carts.* from carts join users on users.id = carts.user_id where carts.id = :userId", nativeQuery = true)
     List<Cart> findAllByUserId(Long userId);
 
     void deleteById(Long id);

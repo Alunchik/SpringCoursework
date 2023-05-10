@@ -6,3 +6,6 @@ spring:
     url: jdbc:postgresql://localhost:5432/coursework
     username: postgres
     password: admin
+
+server:
+  port: 8888
